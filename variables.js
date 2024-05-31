@@ -14,31 +14,31 @@
 
 // ---undefined---
 // console.log(name);
-// var name;
-// name = "Asif";
+var name;
+name = "Asif";
 
 // ---undefined---
 // console.log(product);
-// var product;
-// product = "Bread";
+var product;
+product = "Bread";
 
 // ---let keyword-----------
 
 // ---undefined---
-// let group;
+let groups;
 // console.log(group);
 
 //-- ReferenceError: Cannot access 'group' before initialization--
 // console.log(group);
-// let group;
+let group;
 
 // ---normal---
-// let subject = "Biology";
-// console.log(subject);
+let subject1 = "English";
+// console.log(subject1);
 
 // ---ReferenceError: Cannot access 'subject' before initialization--
-// console.log(subject);
-// let subject = "Biology";
+// console.log(subject2);
+let subject2 = "Biology";
 
 //--- Global Scope---
 
@@ -49,11 +49,16 @@ function logGrapes() {
   var grapesPrice = 400;
   // console.log(grapesPrice);
   // console.log(grapes); // 🍇
+  // console.log(mango);
+
   // Block Scope in a Functional Scope
   {
     // console.log(grapes); // 🍇
     // console.log(grapesPrice);
+    let mango = "24kg";
+    // console.log(mango);
   }
+  // console.log(mango);
 }
 logGrapes();
 // ReferenceError: grapesPrice is not defined
@@ -68,11 +73,11 @@ logGrapes();
 {
   const banana = "🍌";
   {
-    console.log(banana + " Banana");
+    // console.log(banana + " Banana");
 
     var carrot = "🥕";
     const lemon = "🍋";
   }
-  console.log(carrot); // 🥕
+  // console.log(carrot); // 🥕
   // console.log(lemon); // ReferenceError: lemon is not defined
 }
